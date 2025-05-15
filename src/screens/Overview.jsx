@@ -233,7 +233,7 @@ function Overview() {
   return (
     <Tabtitle title="Overview">
       <Row>
-        <Col lg={12} className="text-end py-3">
+        <Col lg={12} className="py-3">
           <h2 className="main-heading d-inline-block">Overview</h2>
         </Col>
       </Row>
@@ -249,10 +249,7 @@ function Overview() {
               overVal={item.overVal}
               overText={item.overText}
               image={item.image}
-              showLink={item.showLink}
-              linkss={item.linkss}
-              filter={item.showLink && item.filter}
-              descr={item.showLink && item.descr}
+              maxHeight100="maxHeight100"
             />
           </Col>
         ))}

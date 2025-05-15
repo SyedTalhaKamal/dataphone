@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Cookies from "js-cookie";
 import AvatarUser from "../assets/images/user.png";
 import NavLogo from "../assets/images/logo.png";
-import { FaRegBell } from "react-icons/fa";
+import { FaRegBell, FaBars, FaTimes } from "react-icons/fa";
 import { toast } from "react-toastify";
 
-function Header() {
+function Header({ toggleMenu, isMenuOpen }) {
   let access_token = Cookies.get("Refresh");
   let refresh_token = Cookies.get("Access");
   const navigate = useNavigate();
@@ -29,16 +29,17 @@ function Header() {
 
   return (
     <>
-      <div className="box pb-3 d-flex justify-content-between align-items-center mb-2">
+      <div className="headerBox d-flex align-items-center justify-content-between">
         <div className="logo-div">
-          {/* <img src={NavLogo} alt="" className="navLogo" /> */}
+          <Link to="/">
+            <img src={NavLogo} alt="" className="navLogo" />
+          </Link>
         </div>
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center justify-content-end">
           <Dropdown className="tableDown notifications">
-            <Dropdown.Toggle id="dropdown-autoclose-true" className="tbl-drp ">
+            <Dropdown.Toggle id="dropdown-autoclose-true" className="headerDrp">
               <span className="position-relative">
                 <FaRegBell className="header-bell" />
-                {/* <span className="noti-badge">5</span> */}
               </span>
             </Dropdown.Toggle>
             <Dropdown.Menu>
@@ -48,10 +49,10 @@ function Header() {
           <Dropdown className="tableDown">
             <Dropdown.Toggle
               id="dropdown-basic"
-              className="tbl-drp d-flex align-items-center"
+              className="headerDrp d-flex align-items-center"
             >
               <span>{epc_name ? epc_name : site_name}</span>
-              <img src={AvatarUser} alt="" className="user-avatar ms-2" />
+              <img src={AvatarUser} alt="" className="user-avatar mx-2" />
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <h6 className="dropdown-item cursor-pointer" onClick={logout}>
@@ -59,6 +60,13 @@ function Header() {
               </h6>
             </Dropdown.Menu>
           </Dropdown>
+          <button className="hamburger-menu" onClick={toggleMenu}>
+            {isMenuOpen ? (
+              <FaTimes onClick={() => toggleMenu(false)} />
+            ) : (
+              <FaBars />
+            )}
+          </button>
         </div>
       </div>
     </>

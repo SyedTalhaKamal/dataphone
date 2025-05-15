@@ -156,6 +156,14 @@ table {
   border-radius: 9px;
   padding: 30px 20px;
 }
+.headerBox {
+  background: #ffffff;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
 
 .body-wrapper {
   background-color: #f3f3f3;
@@ -166,7 +174,7 @@ table {
 }
 
 .padding-div {
-  /* padding-left: 230px; */
+  padding-left: 230px;
   transition: 0.3s ease-in-out;
 }
 
@@ -186,7 +194,7 @@ table {
 }
 
 .notifications .dropdown-menu {
-  width: 25rem;
+  width: 15rem;
   border: 1px solid #ffb32d;
 }
 
@@ -292,8 +300,8 @@ select:focus {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 72px;
 }
-
 
 .site-sub-menu {
   width: 230px;
@@ -305,18 +313,14 @@ select:focus {
   position: fixed;
 }
 
-
 .position-fixed-sub-menu {
   position: fixed;
   z-index: 1;
 }
 
-
-.navLogo{
+.navLogo {
   display: block;
   width: 150px;
-    margin: 10px auto 50px;
-
 }
 
 .logo-div {
@@ -360,6 +364,16 @@ select:focus {
 
 .site-sub-menu li {
   margin-bottom: 20px;
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  color: #000;
 }
 
 .pwdShow {
@@ -441,15 +455,16 @@ select:focus {
 }
 
 
-.tbl-drp,
-.tbl-drp:hover,
-.tbl-drp:focus {
+.headerDrp,
+.headerDrp:hover,
+.headerDrp:focus {
   background-color: transparent !important;
   border: none;
   color: #000 !important;
+  padding: 5px;
 }
 
-.tbl-drp::after {
+.headerDrp::after {
   display: none;
 }
 
@@ -510,4 +525,32 @@ select:focus {
   right: 7px;
   top: 53px;
 }
+.maxHeight100{
+  height: 100px;
+}
+@media (max-width: 991px) {
+    .site-nav {
+    position: relative;
+  }
+  .site-sub-menu {
+    width: 250px;
+    right: -100%;
+    z-index: 1;
+  }
 
+  .site-sub-menu.active {
+    right: 0;
+  }
+
+  .padding-div {
+    padding-left: 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .body-wrapper {
+    margin-left: 0;
+  }
+}
