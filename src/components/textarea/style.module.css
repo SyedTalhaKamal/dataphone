@@ -1,0 +1,30 @@
+.textArea {
+    background: #FAFAFA;
+    border: 1px solid #EDE7F6;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.textArea label {
+    font-size: 18px;
+    color:  #000;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+
+}
+
+.textArea textarea {
+    padding-right: 30px;
+    color: #212121;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    resize: none;
+}
+.textArea textarea:focus{
+    outline: none;
+    box-shadow: none;
+}

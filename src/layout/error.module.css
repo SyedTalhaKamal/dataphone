@@ -1,0 +1,68 @@
+
+.notfoundd {
+    position: relative;
+    height: 100vh;
+    
+}
+
+.notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 767px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.notfound404 {
+    position: relative;
+    height: 150px;
+    line-height: 150px;
+    margin-bottom: 25px
+}
+
+.notfound404 h1 {
+    font-family: titillium web, sans-serif;
+    font-size: 186px;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+    background: url(../../src/assets/images/text.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-position: center
+}
+
+.notfound h2 {
+    font-family: titillium web, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    color:#ffb32d;
+
+}
+
+.notfound p {
+    font-family: montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px) {
+    .notfound404 {
+        height: 110px;
+        line-height: 110px
+    }
+
+    .notfound404 h1 {
+        font-size: 120px
+    }
+}
