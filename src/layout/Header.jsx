@@ -3,7 +3,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { useNavigate, Link } from "react-router-dom";
 import Cookies from "js-cookie";
 import AvatarUser from "../assets/images/user.png";
-import NavLogo from "../assets/images/logo.png";
+import NavLogo2 from "../assets/images/logo2.png";
 import { FaRegBell, FaBars, FaTimes } from "react-icons/fa";
 import { toast } from "react-toastify";
 
@@ -29,29 +29,22 @@ function Header({ toggleMenu, isMenuOpen }) {
 
   return (
     <>
-      <div className="headerBox d-flex align-items-center justify-content-between">
-        <div className="logo-div">
+      <div className="headerBox d-flex align-items-center justify-content-lg-end justify-content-between">
+        <div className="logo-div d-lg-none d-block">
           <Link to="/">
-            <img src={NavLogo} alt="" className="navLogo" />
+            <img src={NavLogo2} alt="" className="navLogo" />
           </Link>
         </div>
         <div className="d-flex align-items-center justify-content-end">
-          <Dropdown className="tableDown notifications">
-            <Dropdown.Toggle id="dropdown-autoclose-true" className="headerDrp">
-              <span className="position-relative">
-                <FaRegBell className="header-bell" />
-              </span>
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <h3 className="text-center fw-bold mt-2">Notifications</h3>
-            </Dropdown.Menu>
-          </Dropdown>
           <Dropdown className="tableDown">
             <Dropdown.Toggle
               id="dropdown-basic"
               className="headerDrp d-flex align-items-center"
             >
-              <span>{epc_name ? epc_name : site_name}</span>
+              <div className="text-end">
+                <p>John</p>
+                <p>john@gmail.com</p>
+              </div>
               <img src={AvatarUser} alt="" className="user-avatar mx-2" />
             </Dropdown.Toggle>
             <Dropdown.Menu>

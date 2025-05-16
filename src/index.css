@@ -103,9 +103,7 @@ section {
 
 body {
   line-height: 1;
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: 'Asap', sans-serif; */
-  font-family: "Heebo", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
 }
 
 ol,
@@ -147,7 +145,7 @@ table {
   /* border-radius: 0px;
   border-top-left-radius: 0px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3); */
-  background-color: #ffb32d;
+  background-color: #130d38;
 }
 
 .box {
@@ -157,20 +155,21 @@ table {
   padding: 30px 20px;
 }
 .headerBox {
-  background: #ffffff;
+  background: #f4f4f4;
   padding: 10px;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9;
+  z-index: 2;
 }
 
 .body-wrapper {
-  background-color: #f3f3f3;
+  background-color: #f4f4f4;
   padding: 0px 10px 10px 10px;
   height: 100%;
   width: 100%;
   transition: 0.3s ease-in-out;
+  margin-top: 72px;
 }
 
 .padding-div {
@@ -183,7 +182,7 @@ table {
 }
 
 .noti-badge {
-  background-color: #ffb32d;
+  background-color: #130d38;
   color: white;
   padding: 3px 7px;
   position: absolute;
@@ -193,41 +192,19 @@ table {
   font-size: 12px;
 }
 
-.notifications .dropdown-menu {
-  width: 15rem;
-  border: 1px solid #ffb32d;
-}
-
-
-.view-all,
-.view-all:hover {
-  color: #ffb32d;
-}
-
-.noti-day {
-  margin-top: 4px;
-  font-weight: 400;
-  font-size: 12px;
-  display: inline-block;
-}
-
-.notifications .dropdown-item:hover .noti-icon {
-  color: white;
-}
-
 .user-avatar {
   width: 40px;
   height: 40px;
   object-fit: contain;
   object-position: center;
   border-radius: 100%;
-  border: 1px solid #ffb32d;
+  border: 1px solid #130d38;
 }
 
 .main-heading {
   font-size: 30px;
   font-weight: 500;
-  color: #ffb32d;
+  color: #130d38;
 }
 
 .sub-heading {
@@ -238,8 +215,8 @@ table {
 
 .green-btn2 {
   background-color: white;
-  border: 1px solid #ffb32d;
-  color: #ffb32d;
+  border: 1px solid #130d38;
+  color: #130d38;
   padding: 13px 20px;
   border-radius: 5px;
   font-size: 16px;
@@ -249,8 +226,8 @@ table {
 }
 
 .green-btn {
-  background-color: #ffb32d;
-  border: 1px solid #ffb32d;
+  background-color: #130d38;
+  border: 1px solid #130d38;
   color: white;
   padding: 13px 20px;
   border-radius: 5px;
@@ -262,7 +239,7 @@ table {
 
 .green-btn:hover {
   background-color: transparent;
-  color: #ffb32d;
+  color: #130d38;
   transition: 0.3s ease-in-out;
   text-decoration: none;
 }
@@ -300,22 +277,30 @@ select:focus {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 72px;
 }
 
 .site-sub-menu {
   width: 230px;
   padding: 20px 10px;
-  height: 100%;
+  height: 100vh;
   transition: 0.3s ease-in-out;
-  background-color: white;
-  box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  background-color: #130d38;
   position: fixed;
+  z-index: 3;
 }
 
 .position-fixed-sub-menu {
   position: fixed;
   z-index: 1;
+  overflow-y: auto;
+  height: 100%;
+}
+.position-fixed-sub-menu {
+  scrollbar-width: none;
+}
+
+.position-fixed-sub-menu::-webkit-scrollbar {
+  display: none;
 }
 
 .navLogo {
@@ -335,10 +320,14 @@ select:focus {
   color: black !important;
   text-decoration: none !important;
   cursor: pointer;
+  margin-bottom: 10px;
+
 }
 
 .site-sub-menu li a {
-  color: black;
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
   text-decoration: none;
   display: block;
   padding: 10px 20px;
@@ -351,20 +340,18 @@ select:focus {
 
 .site-sub-menu li a:hover,
 .site-sub-menu .nav_links.active {
-  background: #ffb32d;
-  border-radius: 10px;
+  background: #e7e7ff;
+  border-radius: 6px;
   padding: 10px 20px;
-  color: white;
+  color: #130d38;
   text-decoration: none;
+  font-size: 15px;
 }
 
 .site-nav-icon li {
   margin-bottom: 13px;
 }
 
-.site-sub-menu li {
-  margin-bottom: 20px;
-}
 
 .hamburger-menu {
   display: none;
@@ -372,7 +359,6 @@ select:focus {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  z-index: 2;
   color: #000;
 }
 
@@ -385,14 +371,13 @@ select:focus {
   color: #616161;
 }
 
-
 .all-table {
   border-spacing: 0px 20px;
   border-collapse: separate;
 }
 
 .all-table thead tr {
-  background-color: #ffb32d;
+  background-color: #130d38;
   color: white;
 }
 
@@ -454,7 +439,6 @@ select:focus {
   outline: none;
 }
 
-
 .headerDrp,
 .headerDrp:hover,
 .headerDrp:focus {
@@ -472,13 +456,13 @@ select:focus {
 .tableDown .dropdown-item:active,
 .tableDown .dropdown-item:focus,
 .tableDown .dropdown-item:hover {
-  background-color: #ffb32d;
+  background-color: #130d38;
   color: white;
 }
 
 .modalCancel {
-  background-color: #ffb32d;
-  border: 1px solid #ffb32d;
+  background-color: #130d38;
+  border: 1px solid #130d38;
   color: white;
   padding: 5px;
 }
@@ -525,11 +509,77 @@ select:focus {
   right: 7px;
   top: 53px;
 }
-.maxHeight100{
+.maxHeight100 {
   height: 100px;
 }
+.DashboardDiv {
+  padding-top: 50px;
+}
+.applicationHeading {
+  color: white;
+  font-size: 13px;
+  margin: 30px 0 10px 0;
+}
+.navUserDiv{
+  position: relative;
+  bottom: 0;
+}
+.navUser-drp {
+  position: relative;
+  background: transparent;
+  border: 1px solid #b0b0b0;
+  border-radius: 6px;
+  padding: 5px 8px;
+  margin-top: 50px;
+}
+.navUser-lbl {
+  font-size: 12px;
+  font-weight: 400;
+  color: #b2b2b2;
+}
+
+.navUser-allSelect {
+  font-weight: 600;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  resize: none;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+}
+
+.navUser-selectarrow {
+  position: absolute;
+  right: 7px;
+  top: 25px;
+  color: #fff;
+}
+.navUserRole {
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin: 30px 0 70px 0;
+  box-shadow: 0px 4px 4px 0px #0000000a;
+}
+.userRoleSpan {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.userRoleSpan.active,
+.userRoleSpan:hover {
+  box-shadow: 0px 1px 5px -1px #00000030;
+}
 @media (max-width: 991px) {
-    .site-nav {
+  .site-nav {
     position: relative;
   }
   .site-sub-menu {
@@ -540,6 +590,7 @@ select:focus {
 
   .site-sub-menu.active {
     right: 0;
+    top: 20px;
   }
 
   .padding-div {
