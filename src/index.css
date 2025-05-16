@@ -516,9 +516,6 @@ select:focus {
   right: 7px;
   top: 53px;
 }
-.maxHeight100 {
-  height: 100px;
-}
 .DashboardDiv {
   padding-top: 50px;
 }
@@ -594,6 +591,24 @@ select:focus {
 .userRoleSpan.active,
 .userRoleSpan:hover {
   box-shadow: 0px 1px 5px -1px #00000030;
+}
+.blueCard{
+  background-color: #E3F2FD;
+}
+.purpleCard{
+  background-color: #ECE9FF;
+}
+.lightblueCard{
+  background-color: #E0F7FA;
+}
+.orangeCard{
+  background-color: #FFF3E0;
+}
+.redCard{
+  background-color: #FCE4EC;
+}
+.greenCard{
+  background-color: #E8F5E9;
 }
 @media (max-width: 1199px) {
   .main-heading {
