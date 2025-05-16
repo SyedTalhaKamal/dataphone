@@ -219,65 +219,6 @@ table {
   color: #000;
 }
 
-.green-btn2 {
-  background-color: white;
-  border: 1px solid #130d38;
-  color: #130d38;
-  padding: 13px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-.green-btn {
-  background-color: #130d38;
-  border: 1px solid #130d38;
-  color: white;
-  padding: 13px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-.green-btn:hover {
-  background-color: transparent;
-  color: #130d38;
-  transition: 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-.select-drp {
-  position: relative;
-}
-
-.allSelect {
-  font-weight: 500;
-  padding: 15px 15px 15px 10px;
-  font-size: 14px;
-  color: #2e2e2e;
-  width: 100%;
-  resize: none;
-  appearance: none;
-  background: #ffffff;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  border: none;
-}
-
-select:focus {
-  outline: none;
-}
-
-.selectarrow {
-  position: absolute;
-  right: 10px;
-  top: 14px;
-}
-
 .site-nav {
   height: 100%;
   display: flex;
@@ -467,55 +408,6 @@ select:focus {
   color: white;
 }
 
-.modalCancel {
-  background-color: #130d38;
-  border: 1px solid #130d38;
-  color: white;
-  padding: 5px;
-}
-
-.modalHeading {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 15px 0;
-  color: #000;
-  text-align: center;
-}
-
-.modalText {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 15px 0;
-  color: #000;
-  text-align: center;
-}
-
-.modal-drp {
-  position: relative;
-  background: #fafafa;
-  border: 1px solid #ede7f6;
-  border-radius: 12px;
-  padding: 15px 0 15px 15px;
-}
-
-.modal-allSelect {
-  font-weight: 500;
-  padding: 15px 15px 15px 10px;
-  font-size: 14px;
-  color: #2e2e2e;
-  width: 100%;
-  resize: none;
-  appearance: none;
-  background-color: transparent;
-  border-radius: 10px;
-  border: none;
-}
-
-.modal-selectarrow {
-  position: absolute;
-  right: 7px;
-  top: 53px;
-}
 .DashboardDiv {
   padding-top: 50px;
 }

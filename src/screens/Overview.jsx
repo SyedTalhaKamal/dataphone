@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Tabtitle from "../components/tabtitle/Tabtitle.jsx";
 import { Col, Row } from "react-bootstrap";
-import Loader from "../components/loader/Loader.jsx";
-import Barchart from "../charts/barchart/Barchart.js";
 import OverviewCard from "../components/overviewcard/OverviewCard.jsx";
 import { FaChevronDown, FaBell, FaSyncAlt } from "react-icons/fa";
-import Mybtn from "../components/button/buttons.jsx";
 import { GiSolarPower, GiElectric } from "react-icons/gi";
 import { TbBuildingFactory } from "react-icons/tb";
 import Cookies from "js-cookie";
