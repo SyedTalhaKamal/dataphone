@@ -42,10 +42,10 @@ function Header({ toggleMenu, isMenuOpen }) {
               className="headerDrp d-flex align-items-center"
             >
               <div className="text-end">
-                <p>John</p>
-                <p>john@gmail.com</p>
+                <p className="userName">John</p>
+                <p className="userEmail">john@gmail.com</p>
               </div>
-              <img src={AvatarUser} alt="" className="user-avatar mx-2" />
+              <img src={AvatarUser} alt="" className="user-avatar ms-2" />
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <h6 className="dropdown-item cursor-pointer" onClick={logout}>

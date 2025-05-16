@@ -69,7 +69,7 @@ function Overview() {
           </h2>
         </Col>
       </Row>
-      <Row className="mt-2">
+      <Row>
         {overviewcardData.map((item) => (
           <Col
             xxl={2}
