@@ -4,7 +4,17 @@ import NavLogo from "../assets/images/logo.png";
 import { NavLink, Link } from "react-router-dom";
 import Header from "./Header";
 import Cookies from "js-cookie";
-import { FaChevronDown,FaUserTie,FaUser } from "react-icons/fa";
+import { BiHomeSmile } from "react-icons/bi";
+import { FaChevronDown, FaUserTie, FaUser } from "react-icons/fa";
+import {
+  MdOutlinePhoneInTalk,
+  MdOutlinePhone,
+  MdOutlineTextsms,
+  MdKeyboardArrowRight
+} from "react-icons/md";
+import { TiContacts } from "react-icons/ti";
+import { CgUserList } from "react-icons/cg";
+import { TbReportAnalytics } from "react-icons/tb";
 
 function Layout(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,12 +24,16 @@ function Layout(props) {
   };
 
   const applicationsLinks = [
-    { name: "Live Calls", path: "/" },
-    { name: "Call Center", path: "/call_center" },
-    { name: "SMS", path: "/sms" },
-    { name: "Contacts", path: "/contacts" },
-    { name: "PBX Portal", path: "/pbx_portal" },
-    { name: "Report", path: "/report" },
+    {
+      name: "Live Calls",
+      path: "/",
+      icon: <MdOutlinePhoneInTalk />,
+    },
+    { name: "Call Center", path: "/call_center", icon: <MdOutlinePhone /> },
+    { name: "SMS", path: "/sms", icon: <MdOutlineTextsms /> },
+    { name: "Contacts", path: "/contacts", icon: <TiContacts /> },
+    { name: "PBX Portal", path: "/pbx_portal", icon: <CgUserList /> },
+    { name: "Report", path: "/report", icon: <TbReportAnalytics /> },
   ];
 
   return (
@@ -40,7 +54,11 @@ function Layout(props) {
                     <ul>
                       <li>
                         <NavLink className="nav_links" to="/dashboard">
+                          <span className="navIcon me-2">
+                            {<BiHomeSmile />}
+                          </span>
                           Dashboard
+                          <span className="ms-5"><MdKeyboardArrowRight /></span>
                         </NavLink>
                       </li>
                     </ul>
@@ -51,6 +69,7 @@ function Layout(props) {
                       {applicationsLinks.map((link, index) => (
                         <li key={index}>
                           <NavLink className="nav_links" to={link.path}>
+                            <span className="navIcon me-2">{link.icon}</span>{" "}
                             {link.name}
                           </NavLink>
                         </li>
@@ -80,9 +99,13 @@ function Layout(props) {
                       </select>
                       <FaChevronDown className="navUser-selectarrow" />
                     </div>
-                    <div className="navUserRole">
-                      <span className="userRoleSpan active">Admin <FaUserTie className="ms-2"/></span>
-                      <span className="ms-1 userRoleSpan">User <FaUser className="ms-2"/></span>
+                    <div className="navUserRole text-center">
+                      <span className="userRoleSpan active">
+                        Admin <FaUserTie className="ms-2" />
+                      </span>
+                      <span className="ms-1 userRoleSpan">
+                        User <FaUser className="ms-2" />
+                      </span>
                     </div>
                   </div>
                 </div>

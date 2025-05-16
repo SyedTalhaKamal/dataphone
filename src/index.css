@@ -202,9 +202,15 @@ table {
 }
 
 .main-heading {
-  font-size: 30px;
-  font-weight: 500;
-  color: #130d38;
+  font-size: 40px;
+  font-weight: 700;
+  color: #1e1b39;
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
 }
 
 .sub-heading {
@@ -329,7 +335,10 @@ select:focus {
   font-size: 15px;
   text-decoration: none;
   display: block;
-  padding: 10px 20px;
+  padding: 10px;
+}
+.navIcon {
+  font-size: 20px;
 }
 
 .site-sub-menu li:hover a {
@@ -341,7 +350,7 @@ select:focus {
 .site-sub-menu .nav_links.active {
   background: #e7e7ff;
   border-radius: 6px;
-  padding: 10px 20px;
+  padding: 10px;
   color: #130d38;
   text-decoration: none;
   font-size: 15px;
@@ -350,7 +359,6 @@ select:focus {
 .site-nav-icon li {
   margin-bottom: 13px;
 }
-
 
 .hamburger-menu {
   display: none;
@@ -517,9 +525,19 @@ select:focus {
 .applicationHeading {
   color: white;
   font-size: 13px;
-  margin: 30px 0 10px 0;
+  margin: 30px 0 15px 15px;
+  position: relative;
 }
-.navUserDiv{
+.applicationHeading::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 3px;
+  background-color: white;
+  top: 50%;
+  left: -16px;
+}
+.navUserDiv {
   position: relative;
   bottom: 0;
 }
@@ -569,13 +587,18 @@ select:focus {
   color: #222222;
   display: inline-flex;
   align-items: center;
-  padding: 10px 10px;
+  padding: 10px 5px;
   cursor: pointer;
   border-radius: 25px;
 }
 .userRoleSpan.active,
 .userRoleSpan:hover {
   box-shadow: 0px 1px 5px -1px #00000030;
+}
+@media (max-width: 1199px) {
+  .main-heading {
+    font-size: 35px;
+  }
 }
 @media (max-width: 991px) {
   .site-nav {
@@ -586,12 +609,10 @@ select:focus {
     right: -100%;
     z-index: 1;
   }
-
   .site-sub-menu.active {
     right: 0;
     top: 20px;
   }
-
   .padding-div {
     padding-left: 0;
   }
@@ -599,8 +620,16 @@ select:focus {
   .hamburger-menu {
     display: block;
   }
-
   .body-wrapper {
     margin-left: 0;
+  }
+  .main-heading {
+    position: static;
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+    .main-heading {
+    font-size: 25px;
   }
 }
