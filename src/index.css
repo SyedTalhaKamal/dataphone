@@ -307,7 +307,7 @@ table {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #000;
+  color: #e7e7ff;
 }
 
 .pwdShow {
@@ -484,23 +484,23 @@ table {
 .userRoleSpan:hover {
   box-shadow: 0px 1px 5px -1px #00000030;
 }
-.blueCard{
-  background-color: #E3F2FD;
+.blueCard {
+  background-color: #e3f2fd;
 }
-.purpleCard{
-  background-color: #ECE9FF;
+.purpleCard {
+  background-color: #ece9ff;
 }
-.lightblueCard{
-  background-color: #E0F7FA;
+.lightblueCard {
+  background-color: #e0f7fa;
 }
-.orangeCard{
-  background-color: #FFF3E0;
+.orangeCard {
+  background-color: #fff3e0;
 }
-.redCard{
-  background-color: #FCE4EC;
+.redCard {
+  background-color: #fce4ec;
 }
-.greenCard{
-  background-color: #E8F5E9;
+.greenCard {
+  background-color: #e8f5e9;
 }
 @media (max-width: 1199px) {
   .main-heading {
@@ -508,6 +508,15 @@ table {
   }
 }
 @media (max-width: 991px) {
+  .headerBox {
+    background-color: #130d38;
+  }
+  .headerDrp p {
+    color: #e7e7ff;
+  }
+  .user-avatar{
+    border: 1px solid #e7e7ff;
+  }
   .site-nav {
     position: relative;
   }
@@ -536,7 +545,12 @@ table {
   }
 }
 @media (max-width: 767px) {
-    .main-heading {
+  .main-heading {
     font-size: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .headerDrp p {
+    display:none;
   }
 }

@@ -3,7 +3,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { useNavigate, Link } from "react-router-dom";
 import Cookies from "js-cookie";
 import AvatarUser from "../assets/images/user.png";
-import NavLogo2 from "../assets/images/logo2.png";
+import NavLogo from "../assets/images/logo.png";
 import { FaRegBell, FaBars, FaTimes } from "react-icons/fa";
 import { toast } from "react-toastify";
 
@@ -32,7 +32,7 @@ function Header({ toggleMenu, isMenuOpen }) {
       <div className="headerBox d-flex align-items-center justify-content-lg-end justify-content-between">
         <div className="logo-div d-lg-none d-block">
           <Link to="/">
-            <img src={NavLogo2} alt="" className="navLogo" />
+            <img src={NavLogo} alt="" className="navLogo" />
           </Link>
         </div>
         <div className="d-flex align-items-center justify-content-end">
