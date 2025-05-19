@@ -1,25 +1,25 @@
-.overviewCard {
+.card {
     border-radius: 12px;
     padding: 10px;
     box-shadow: 4px 4px 11px 0px #00000030;
     position:relative;
 }
 
-.overviewCard h2 {
+.card h2 {
     font-size: 25px;
     font-weight: 700;
     color: #130D38;
     margin-top:25px
 }
 
-.overviewCard p {
+.card p {
     font-size: 12px;
     font-weight: 500;
     color: #00000080;
     margin-top: 5px;
 }
 
-.overviewCard .cardIcon {
+.card .cardIcon {
     position: absolute;
     top: 15px;
     right: 7px;
@@ -32,11 +32,11 @@
 
 
 @media (max-width: 1399px) {
-.overviewCard h2{
+.card h2{
     margin-top: 5px;
  }
  
-.overviewCard .cardIcon {
+.card .cardIcon {
     top: 10px;
 }
 

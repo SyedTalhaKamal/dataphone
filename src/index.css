@@ -151,9 +151,11 @@ table {
 
 .box {
   background: #ffffff;
-  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
-  padding: 30px 20px;
+  border-radius: 12px;
+  padding: 15px 0;
+}
+.innerBoxPadding {
+  padding: 0px 15px;
 }
 .headerBox {
   background: #f4f4f4;
@@ -194,7 +196,7 @@ table {
 }
 
 .user-avatar {
-  width: 40px;
+  width: 60px;
   height: 40px;
   object-fit: contain;
   object-position: top;
@@ -215,8 +217,16 @@ table {
 
 .sub-heading {
   font-size: 20px;
-  font-weight: 600;
-  color: #000;
+  font-weight: 700;
+  color: #1e1b39;
+}
+.sub-headingImg {
+  width: 32px;
+  height: 38px;
+  object-fit: contain;
+  object-position: top;
+  border-radius: 100%;
+  margin-right: 20px;
 }
 
 .site-nav {
@@ -393,7 +403,7 @@ table {
   background-color: white !important;
   border: none;
   color: #000 !important;
-  padding: 5px 20px;
+  padding: 5px 0px 5px 20px;
   border-radius: 25px;
 }
 .userName {
@@ -477,6 +487,9 @@ table {
   top: 25px;
   color: #fff;
 }
+select:focus {
+  outline: none;
+}
 .navUserRole {
   background-color: white;
   border-radius: 25px;
@@ -516,6 +529,84 @@ table {
 .greenCard {
   background-color: #e8f5e9;
 }
+
+.global-drp {
+  position: relative;
+  background: transparent;
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  padding: 10px 8px 4px 8px;
+}
+.global-selectLbl {
+  font-size: 14px;
+  font-weight: 400;
+  color: #717171;
+  padding-left: 4px;
+}
+
+.global-select {
+  font-weight: 600;
+  padding: 0px 4px;
+  font-size: 16px;
+  color: #222222;
+  width: 100%;
+  resize: none;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  line-height: 1.1;
+}
+
+.global-selectarrow {
+  position: absolute;
+  right: 7px;
+  top: 20px;
+  color: #222222;
+}
+
+.all-lbl {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.all-input {
+  font-weight: 600;
+  font-size: 16px;
+  color: #222222;
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  padding: 14px 8px;
+  width: 100%;
+}
+.all-input::placeholder {
+  font-weight: 600;
+  font-size: 16px;
+  color: #222222;
+}
+
+.all-input:focus {
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  background-color: transparent;
+  border: none;
+  color: #b0b0b0;
+}
+.searchIconPadding{
+  padding-left: 35px;
+}
+
+.bdrBtm{
+  border-bottom: 1px solid #D0D0D0;
+  padding-bottom: 10px;
+  margin-top: 15px;
+}
+
 @media (max-width: 1199px) {
   .main-heading {
     font-size: 35px;
@@ -529,7 +620,7 @@ table {
   .headerDrp:hover,
   .headerDrp:focus {
     background-color: transparent !important;
-    padding:0;
+    padding: 0;
   }
 
   .headerDrp p {

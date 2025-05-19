@@ -45,7 +45,7 @@ function Header({ toggleMenu, isMenuOpen }) {
                 <p className="userName">John</p>
                 <p className="userEmail">john@gmail.com</p>
               </div>
-              <img src={AvatarUser} alt="" className="user-avatar ms-2" />
+              <img src={AvatarUser} alt="" className="user-avatar" />
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <h6 className="dropdown-item cursor-pointer" onClick={logout}>

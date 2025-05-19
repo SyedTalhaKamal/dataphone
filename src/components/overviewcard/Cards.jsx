@@ -1,17 +1,17 @@
 import React from "react";
 import style from "./style.module.css";
 
-function OverviewCard(props) {
+function Cards(props) {
   return (
     <>
       <div
-        className={`${style.overviewCard} ${
+        className={`${style.card} ${
           props.backgroundColor ? props.backgroundColor : ""
         }`}
       >
         <div>
-          <h2>{props.overVal}</h2>
-          <p>{props.overText}</p>
+          <h2>{props.cardVal}</h2>
+          <p>{props.cardText}</p>
         </div>
         <img src={props.image} alt="" className={style.cardIcon} />
       </div>
@@ -19,4 +19,4 @@ function OverviewCard(props) {
   );
 }
 
-export default OverviewCard;
+export default Cards;
