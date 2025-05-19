@@ -10,7 +10,7 @@ import {
   MdOutlinePhoneInTalk,
   MdOutlinePhone,
   MdOutlineTextsms,
-  MdKeyboardArrowRight
+  MdKeyboardArrowRight,
 } from "react-icons/md";
 import { TiContacts } from "react-icons/ti";
 import { CgUserList } from "react-icons/cg";
@@ -58,7 +58,9 @@ function Layout(props) {
                             {<BiHomeSmile />}
                           </span>
                           Dashboard
-                          <span className="ms-5"><MdKeyboardArrowRight /></span>
+                          <span className="ms-5">
+                            <MdKeyboardArrowRight />
+                          </span>
                         </NavLink>
                       </li>
                     </ul>

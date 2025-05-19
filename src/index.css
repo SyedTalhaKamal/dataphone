@@ -451,7 +451,7 @@ table {
   left: -16px;
 }
 .navUserDiv {
-  position: relative;
+  position: fixed;
   bottom: 0;
 }
 .navUser-drp {
@@ -667,12 +667,12 @@ select:focus {
   transition: 0.3s ease-in-out;
   text-decoration: none;
 }
-.callingDataDiv{
+.callingDataDiv {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #B0B0B0;
+  border: 1px solid #b0b0b0;
   border-radius: 12px;
   padding: 5px;
 }
@@ -698,6 +698,11 @@ button {
   background-color: transparent;
   border: none;
   outline: none;
+}
+@media (max-width: 1599px) {
+  .navUserDiv {
+    position: relative;
+  }
 }
 @media (max-width: 1199px) {
   .main-heading {
@@ -754,10 +759,10 @@ button {
   .headerDrp p {
     display: none;
   }
-  .callingDataDiv{
+  .callingDataDiv {
     flex-wrap: wrap;
   }
-  .buttonDiv{
+  .buttonDiv {
     width: 100%;
     text-align: center;
   }
