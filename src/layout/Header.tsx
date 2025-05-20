@@ -1,31 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { useNavigate, Link } from "react-router-dom";
-import Cookies from "js-cookie";
 import AvatarUser from "../assets/images/user.png";
 import NavLogo from "../assets/images/logo.png";
-import { FaRegBell, FaBars, FaTimes } from "react-icons/fa";
-import { toast } from "react-toastify";
+import {FaBars, FaTimes } from "react-icons/fa";
 
-function Header({ toggleMenu, isMenuOpen }) {
-  let access_token = Cookies.get("Refresh");
-  let refresh_token = Cookies.get("Access");
+
+interface HeaderProps {
+  toggleMenu: () => void;
+  isMenuOpen: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ toggleMenu, isMenuOpen }) => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!access_token && !refresh_token) {
-      navigate("/");
-    }
-  }, []);
-
   const logout = () => {
-    Cookies.remove("Refresh");
-    Cookies.remove("Access");
     sessionStorage.clear();
     navigate("/");
   };
-  const epc_name = Cookies.get("EPC_Name");
-  const site_name = Cookies.get("Site_Name");
+
 
   return (
     <>
@@ -54,16 +46,12 @@ function Header({ toggleMenu, isMenuOpen }) {
             </Dropdown.Menu>
           </Dropdown>
           <button className="hamburger-menu" onClick={toggleMenu}>
-            {isMenuOpen ? (
-              <FaTimes onClick={() => toggleMenu(false)} />
-            ) : (
-              <FaBars />
-            )}
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default Header;

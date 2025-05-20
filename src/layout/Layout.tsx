@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, ReactNode } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import NavLogo from "../assets/images/logo.png";
 import { NavLink, Link } from "react-router-dom";
 import Header from "./Header";
-import Cookies from "js-cookie";
 import { BiHomeSmile } from "react-icons/bi";
 import { FaChevronDown, FaUserTie, FaUser } from "react-icons/fa";
 import {
@@ -16,14 +15,24 @@ import { TiContacts } from "react-icons/ti";
 import { CgUserList } from "react-icons/cg";
 import { TbReportAnalytics } from "react-icons/tb";
 
-function Layout(props) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface LayoutProps {
+  children: ReactNode;
+}
 
-  const toggleMenu = () => {
+interface ApplicationLink {
+  name: string;
+  path: string;
+  icon: React.ReactNode;
+}
+
+function Layout(props: LayoutProps) {
+const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const applicationsLinks = [
+  const applicationsLinks: ApplicationLink[] = [
     {
       name: "Live Calls",
       path: "/",
@@ -76,14 +85,6 @@ function Layout(props) {
                           </NavLink>
                         </li>
                       ))}
-                      {/* <li>
-                      <NavLink
-                        className="nav_links"
-                        to="/"
-                      >
-                        Live Calls
-                      </NavLink>
-                    </li> */}
                     </ul>
                   </div>
                   <div className="navUserDiv">

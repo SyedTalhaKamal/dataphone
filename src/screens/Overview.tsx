@@ -1,36 +1,18 @@
-import React, { useState, useEffect } from "react";
-import Tabtitle from "../components/tabtitle/Tabtitle.jsx";
+import React from "react";
+import Tabtitle from "../components/tabtitle/Tabtitle";
 import { Col, Row } from "react-bootstrap";
-import Cards from "../components/overviewcard/Cards.jsx";
+import Cards from "../components/overviewcard/Cards";
 import {
   FaChevronDown,
-  FaBell,
-  FaSyncAlt,
   FaSearch,
-  FaCheckCircle,
   FaRegClock,
-  FaInfo,
-  FaPhoneAltFaInfo,
   FaPhoneAlt,
 } from "react-icons/fa";
-import { GiSolarPower, GiElectric } from "react-icons/gi";
-import { TbBuildingFactory } from "react-icons/tb";
-import {
-  MdOutlinePermPhoneMsg,
-  MdOutlineSupportAgent,
-  MdOutlinePhoneInTalk,
-} from "react-icons/md";
+
+import {MdOutlinePermPhoneMsg,MdOutlineSupportAgent} from "react-icons/md";
 import { RiEqualizerLine } from "react-icons/ri";
-import {
-  BsFillTelephoneOutboundFill,
-  BsThreeDotsVertical,
-} from "react-icons/bs";
+import {BsFillTelephoneOutboundFill} from "react-icons/bs";
 import { TiContacts } from "react-icons/ti";
-import Cookies from "js-cookie";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
-import Error from "../layout/Error.jsx";
-import { BASE_URL, colors, getMaxValue } from "../constants.js";
 import bluePhone from "../assets/images/blue_phone.png";
 import purplePhone from "../assets/images/purple_phone.png";
 import lightblueUsers from "../assets/images/lightblue_users.png";
@@ -41,18 +23,52 @@ import activeUser from "../assets/images/active_user.png";
 import userProfile from "../assets/images/user_profile.png";
 import tick from "../assets/images/tick.png";
 import phone from "../assets/images/phone.png";
-import clock from "../assets/images/clock.png";
-import logout from "../assets/images/logout.png";
 import userProfile2 from "../assets/images/userIcon2.png";
 import pauseIcon from "../assets/images/pauseIcon.png";
 import recordIcon from "../assets/images/recordIcon.png";
 import Icon3 from "../assets/images/icon3.png";
 import Icon4 from "../assets/images/icon4.png";
 
-function Overview() {
-  const pageTitle = "Live Calls";
+interface TopCardData {
+  backgroundColor: string;
+  cardVal: string;
+  cardText: string;
+  image: string;
+}
 
-  const topcardData = [
+interface OnlineUserData {
+  image: string;
+  name: string;
+  callIcon: React.ReactNode;
+  callText: string;
+  statusIcon: string;
+  statusText: string;
+  detailedView: boolean;
+  number?: string;
+  durationIcon?: React.ReactNode;
+  duration?: string;
+}
+
+interface CallingData {
+  image: string;
+  name: string;
+  callIcon: React.ReactNode;
+  callId: string;
+  statusIcon: React.ReactNode;
+  statusText: string;
+  numberIcon: React.ReactNode;
+  number: string;
+  duration: string;
+  pauseIcon: string;
+  recordIcon: string;
+  Icon3: string;
+  Icon4: string;
+}
+
+const Overview: React.FC = () => {
+  const pageTitle: string = "Live Calls";
+
+  const topcardData: TopCardData[] = [
     {
       backgroundColor: "blueCard",
       cardVal: "3m 25s",
@@ -90,7 +106,8 @@ function Overview() {
       image: greenPhone,
     },
   ];
-  const onlineUsersData = [
+
+  const onlineUsersData: OnlineUserData[] = [
     {
       image: userProfile,
       name: "Otto Navarro",
@@ -173,7 +190,8 @@ function Overview() {
       detailedView: true,
     },
   ];
-  const callingData = [
+
+  const callingData: CallingData[] = [
     {
       image: userProfile2,
       name: "Ross Mason",
@@ -413,7 +431,7 @@ function Overview() {
             <div className="innerBoxPadding">
               <div className="d-flex align-items-center">
                 <img src={activeUser} alt="" className="sub-headingImg" />
-                <h3 className="sub-heading">Avialable User Online</h3>
+                <h3 className="sub-heading">Available User Online</h3>
               </div>
               <Row>
                 <Col xxl={12} sm={6}>
@@ -558,6 +576,6 @@ function Overview() {
       </Row>
     </Tabtitle>
   );
-}
+};
 
 export default Overview;
