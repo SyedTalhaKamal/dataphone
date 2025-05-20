@@ -26,7 +26,7 @@ interface ApplicationLink {
 }
 
 function Layout(props: LayoutProps) {
-const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
@@ -38,11 +38,11 @@ const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
       path: "/",
       icon: <MdOutlinePhoneInTalk />,
     },
-    { name: "Call Center", path: "/call_center", icon: <MdOutlinePhone /> },
+    { name: "Call Center", path: "/javascript:void(0)", icon: <MdOutlinePhone /> },
     { name: "SMS", path: "/sms", icon: <MdOutlineTextsms /> },
-    { name: "Contacts", path: "/contacts", icon: <TiContacts /> },
-    { name: "PBX Portal", path: "/pbx_portal", icon: <CgUserList /> },
-    { name: "Report", path: "/report", icon: <TbReportAnalytics /> },
+    { name: "Contacts", path: "/javascript:void(0)", icon: <TiContacts /> },
+    { name: "PBX Portal", path: "/javascript:void(0)", icon: <CgUserList /> },
+    { name: "Report", path: "/javascript:void(0)", icon: <TbReportAnalytics /> },
   ];
 
   return (
@@ -62,7 +62,7 @@ const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
                   <div className="DashboardDiv">
                     <ul>
                       <li>
-                        <NavLink className="nav_links" to="/dashboard">
+                        <NavLink className="nav_links" to="/javascript:void(0)" onClick={(e) => e.preventDefault()}>
                           <span className="navIcon me-2">
                             {<BiHomeSmile />}
                           </span>
@@ -79,7 +79,7 @@ const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
                     <ul>
                       {applicationsLinks.map((link, index) => (
                         <li key={index}>
-                          <NavLink className="nav_links" to={link.path}>
+                          <NavLink className="nav_links" to={link.path} onClick={(e) => e.preventDefault()}>
                             <span className="navIcon me-2">{link.icon}</span>{" "}
                             {link.name}
                           </NavLink>
