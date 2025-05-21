@@ -26,7 +26,7 @@ interface ApplicationLink {
 }
 
 function Layout(props: LayoutProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);

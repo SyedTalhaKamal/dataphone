@@ -27,55 +27,20 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.6.1",
     "react-toastify": "^9.1.1",
-    "typescript": "^5.8.3",
+    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:react/recommended",
-      "plugin:react-hooks/recommended",
-      "prettier"
-    ],
-    "plugins": [
-      "@typescript-eslint",
-      "react",
-      "react-hooks"
-    ],
-    "rules": {
-      "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-unused-vars": "warn",
-      "react/prop-types": "off"
-    },
-    "overrides": [
-      {
-        "files": ["**/*.ts", "**/*.tsx"],
-        "parser": "@typescript-eslint/parser",
-        "parserOptions": {
-          "project": "./tsconfig.json",
-          "ecmaVersion": 12,
-          "sourceType": "module"
-        },
-        "rules": {
-          "@typescript-eslint/explicit-module-boundary-types": "off"
-        }
-      }
-    ],
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    }
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -92,14 +57,9 @@
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",
     "@babel/preset-react": "^7.22.5",
-    "@typescript-eslint/eslint-plugin": "^8.32.1",
-    "@typescript-eslint/parser": "^8.32.1",
     "babel-jest": "^29.6.2",
-    "eslint": "^9.27.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^27.5.1",
-    "react-test-renderer": "^18.2.0"
+    "react-test-renderer": "^18.2.0",
+    "eslint": "^8.57.0"
   }
 }
